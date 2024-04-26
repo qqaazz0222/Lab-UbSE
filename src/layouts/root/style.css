@@ -1,0 +1,7 @@
+#rootLayout {
+    display: flex;
+    flex-direction: column;
+    width: 100svw;
+    min-height: 100svh;
+    background-color: #ffffff;
+}

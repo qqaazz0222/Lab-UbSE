@@ -1,0 +1,30 @@
+@font-face {
+    font-family: "Wanted Sans Variable";
+    font-style: normal;
+    font-display: swap;
+    font-weight: 400 1000;
+    src: url("./assets/fonts/WantedSansVariable.woff2")
+        format("woff2-variations");
+}
+
+* {
+    font-family: "Wanted Sans Variable" !important;
+}
+
+:root {
+    --max-content-width: 80rem;
+    --header-z-index: 1000;
+    --section-z-index: 100;
+    --popup-z-index: 200;
+    --modal-z-index: 300;
+    --heading-large: 3.125rem;
+    --heading-medium: 2.5rem;
+    --heading-small: 2rem;
+}
+
+/* 태블릿 */
+@media (max-width: 1024px) {
+}
+/* 모바일 */
+@media (max-width: 768px) {
+}

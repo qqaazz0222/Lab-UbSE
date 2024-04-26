@@ -1,0 +1,10 @@
+#projectSection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    width: 100svw;
+    min-height: 100svh;
+    background-color: #ffffff;
+    z-index: var(--section-z-index);
+}

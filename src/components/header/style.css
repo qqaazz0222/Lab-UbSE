@@ -1,0 +1,131 @@
+/* PC */
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100svw;
+    height: 4.5rem;
+    background-color: transparent;
+    border-bottom: 1px solid #ffffff22;
+    transition: background-color 0.25s, border-bottom 0.25s;
+    z-index: var(--header-z-index);
+}
+.header.activate,
+.header:hover {
+    background-color: #ffffff;
+    border-bottom: 1px solid #ddd;
+}
+
+.header .headerContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: var(--max-content-width);
+}
+
+.header .headerContainer > .logoWrap {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #ffffff;
+    transition: color 0.25s;
+    cursor: pointer;
+}
+.header.activate .headerContainer > .logoWrap,
+.header:hover .headerContainer > .logoWrap {
+    color: #000000;
+}
+.header .headerContainer > .menuWrap {
+}
+
+.header .headerContainer > .menuWrap > ul {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 2rem;
+}
+
+.header .headerContainer > .menuWrap > ul > li {
+    font-size: 0.875rem;
+    font-weight: bold;
+    color: #ffffff;
+    transition: color 0.25s;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.header .headerContainer > .menuWrap > ul > li > hr {
+    border: none;
+    border-bottom: 1px solid #000000;
+    animation: slideOut 0.5s forwards;
+}
+
+.header .headerContainer > .menuWrap > ul > li:hover > hr {
+    animation: slideIn 0.5s forwards;
+}
+
+@keyframes slideIn {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+@keyframes slideOut {
+    0% {
+        transform: translateX(0%);
+    }
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+.header.activate .headerContainer > .menuWrap > ul > li,
+.header:hover .headerContainer > .menuWrap > ul > li {
+    color: #000000;
+}
+
+.header .headerContainer > .funcWrap {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.header .headerContainer > .funcWrap > button {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.25rem;
+    padding: 0.5rem 1.375rem;
+    background-color: #ffffff;
+    border-radius: 4rem;
+    font-size: 0.875rem;
+    font-weight: bold;
+    color: #000000;
+    transition: color 0.25s, background-color 0.25s;
+}
+.header.activate .headerContainer > .funcWrap > button,
+.header:hover .headerContainer > .funcWrap > button {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+.header .headerContainer > .funcWrap > button > svg {
+    width: 1.25rem;
+    height: 1.25rem;
+}
+
+/* 태블릿 */
+@media (max-width: 1024px) {
+}
+/* 모바일 */
+@media (max-width: 768px) {
+}
