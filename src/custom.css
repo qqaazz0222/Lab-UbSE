@@ -7,19 +7,53 @@
         format("woff2-variations");
 }
 
+@font-face {
+    font-family: "Pretendard";
+    font-style: normal;
+    font-display: swap;
+    font-weight: 100 900;
+    src: url("./assets/fonts/PretendardVariable.woff2")
+        format("woff2-variations");
+}
+
 * {
-    font-family: "Wanted Sans Variable" !important;
+    font-family: "Pretendard" !important;
 }
 
 :root {
+    --primary-color: #c40352;
+    --primary-color-var-1: #eba7c4;
+    --primary-color-var-2: #df75a1;
+    --primary-color-var-3: #d3437d;
+    --primary-color-var-4: #9d0b45;
+    --footer-bg-color: #111111;
     --max-content-width: 80rem;
     --header-z-index: 1000;
+    --section-bg-color-1: #ffffff;
+    --section-bg-color-2: #f8f8f8;
     --section-z-index: 100;
     --popup-z-index: 200;
     --modal-z-index: 300;
     --heading-large: 3.125rem;
     --heading-medium: 2.5rem;
     --heading-small: 2rem;
+    --heading-weight: 700;
+    --heading-color: #000000;
+    --title-large: 1.75rem;
+    --title-medium: 1.5rem;
+    --title-small: 1.25rem;
+    --title-weight: 700;
+    --title-color: #111111;
+    --body-large: 1.25rem;
+    --body-medium: 1rem;
+    --body-small: 0.875rem;
+    --body-weight: 400;
+    --body-color: #666666;
+    --screen-margin: 1.5rem;
+    --article-margin: 10rem;
+    --article-gap: 5rem;
+    --border-radius: 0.375rem;
+    --border-color: #dddddd;
 }
 
 /* 태블릿 */
@@ -27,4 +61,9 @@
 }
 /* 모바일 */
 @media (max-width: 768px) {
+}
+
+*::selection {
+    color: #ffffff;
+    background-color: var(--primary-color);
 }

@@ -9,12 +9,28 @@ import "./style.css";
 
 const Header = () => {
     const [isTop, setIsTop] = useState(true);
-    const scrollHandler = () => {
-        if (window.scrollY <= 50) {
-            setIsTop(true);
+    const [scrollDirection, setScrollDirection] = useState("up");
+    const [isHidden, setIsHidden] = useState(false);
+    let preScrollY = 0;
+    const scrollHandler = (e) => {
+        const curScrollY = window.scrollY;
+        const windowHeight = window.innerHeight;
+        let curScrollDirection = "";
+        setIsTop(curScrollY <= 50);
+        if (preScrollY < curScrollY) {
+            curScrollDirection = "down";
         } else {
-            setIsTop(false);
+            curScrollDirection = "up";
         }
+        setScrollDirection(preScrollY < curScrollY ? "down" : "up");
+        if (curScrollY > windowHeight) {
+            if (curScrollDirection == "up") {
+                setIsHidden(false);
+            } else if (curScrollDirection == "down") {
+                setIsHidden(true);
+            }
+        }
+        preScrollY = curScrollY;
     };
     useEffect(() => {
         window.addEventListener("scroll", scrollHandler);
@@ -22,8 +38,17 @@ const Header = () => {
             window.removeEventListener("scroll", scrollHandler);
         };
     }, []);
+    useEffect(() => {
+        console.log(isHidden);
+        const target = document.getElementById("header");
+        if (isHidden) {
+            target.style.transform = "translateY(-100%)";
+        } else {
+            target.style.transform = "translateY(0%)";
+        }
+    }, [isHidden]);
     return (
-        <div className={`header ${!isTop && "activate"}`}>
+        <div id="header" className={`header ${!isTop && "activate"}`}>
             <div className="headerContainer">
                 <div className="logoWrap">UbSE</div>
                 <div className="menuWrap">
