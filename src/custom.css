@@ -49,9 +49,14 @@
     --body-small: 0.875rem;
     --body-weight: 400;
     --body-color: #666666;
+    --desc-large: 1rem;
+    --desc-medium: 0.875rem;
+    --desc-small: 0.75rem;
+    --desc-weight: 400;
+    --desc-color: #999999;
     --screen-margin: 1.5rem;
     --article-margin: 10rem;
-    --article-gap: 5rem;
+    --article-gap: 4rem;
     --border-radius: 0.375rem;
     --border-color: #dddddd;
 }

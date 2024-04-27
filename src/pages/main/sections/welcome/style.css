@@ -9,6 +9,29 @@
     z-index: var(--section-z-index);
 }
 
+#welcomeSection .bgWrap {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100svw;
+    height: 100svh;
+}
+
+#welcomeSection .bgWrap > video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#welcomeSection .fgWrap {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100svw;
+    height: 100svh;
+    background-color: #00000060;
+}
+
 #welcomeSection .hintWrap {
     display: flex;
     flex-direction: column;

@@ -2,6 +2,9 @@
 // 서비스
 // 컴포넌트
 // 아이콘
+// 이미지
+import DSULOGO from "@/assets/images/dsu-logo.png";
+import DSUSWLOGO from "@/assets/images/dsu-sw-logo.png";
 // 스타일
 import "./style.css";
 
@@ -34,10 +37,8 @@ const Footer = () => {
                         </div>
                     </div>
                     <div className="logoWrap">
-                        <img
-                            src="https://www.dongseo.ac.kr/_Img/Common/logo.png"
-                            alt=""
-                        />
+                        <img src={DSULOGO} alt="동서대학교" />
+                        <img src={DSUSWLOGO} alt="동서대학교 소중대 사업단" />
                     </div>
                 </div>
             </div>

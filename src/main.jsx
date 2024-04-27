@@ -6,6 +6,8 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import RootLayout from "./layouts/root/layout";
 // 페이지
 import MainPage from "./pages/main/page";
+import IntroductionPage from "./pages/introduction/page";
+import MemberPage from "./pages/member/page";
 // 스타일
 import "./index.css";
 import "./custom.css";
@@ -17,6 +19,14 @@ const router = createBrowserRouter([
             {
                 path: "/",
                 element: <MainPage />,
+            },
+            {
+                path: "/introduction",
+                element: <IntroductionPage />,
+            },
+            {
+                path: "/member",
+                element: <MemberPage />,
             },
         ],
     },

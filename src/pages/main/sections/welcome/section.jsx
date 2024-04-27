@@ -3,13 +3,17 @@
 // 컴포넌트
 // 아이콘
 import { ChevronDown } from "lucide-react";
+// 동영상
+import BG from "@/assets/videos/bg-main.mp4";
 // 스타일
 import "./style.css";
 
 const WelcomeSection = () => {
     return (
         <div id="welcomeSection" className="section">
-            <div className="bgWrap"></div>
+            <div className="bgWrap">
+                <video src={BG} loop muted autoPlay playsInline />
+            </div>
             <div className="fgWrap"></div>
             <div className="hintWrap">
                 <div className="iconWrap">

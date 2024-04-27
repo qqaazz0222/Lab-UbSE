@@ -1,5 +1,6 @@
 // 라이브러리
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 // 서비스
 // 컴포넌트
 // 아이콘
@@ -8,6 +9,8 @@ import { MessageSquareMore } from "lucide-react";
 import "./style.css";
 
 const Header = () => {
+    console.log(window.location.pathname);
+    const navigate = useNavigate();
     const [isTop, setIsTop] = useState(true);
     const [scrollDirection, setScrollDirection] = useState("up");
     const [isHidden, setIsHidden] = useState(false);
@@ -16,7 +19,9 @@ const Header = () => {
         const curScrollY = window.scrollY;
         const windowHeight = window.innerHeight;
         let curScrollDirection = "";
-        setIsTop(curScrollY <= 50);
+        if (window.location.pathname === "/") {
+            setIsTop(curScrollY <= 50);
+        }
         if (preScrollY < curScrollY) {
             curScrollDirection = "down";
         } else {
@@ -39,7 +44,6 @@ const Header = () => {
         };
     }, []);
     useEffect(() => {
-        console.log(isHidden);
         const target = document.getElementById("header");
         if (isHidden) {
             target.style.transform = "translateY(-100%)";
@@ -47,25 +51,56 @@ const Header = () => {
             target.style.transform = "translateY(0%)";
         }
     }, [isHidden]);
+    useEffect(() => {
+        window.scrollTo(0, 0);
+        if (window.location.pathname === "/") {
+            setIsTop(true);
+        } else {
+            setIsTop(false);
+        }
+    }, [window.location.pathname]);
     return (
         <div id="header" className={`header ${!isTop && "activate"}`}>
             <div className="headerContainer">
-                <div className="logoWrap">UbSE</div>
+                <div
+                    className="logoWrap"
+                    onClick={() => {
+                        navigate("/");
+                    }}
+                >
+                    UbSE
+                </div>
                 <div className="menuWrap">
                     <ul>
-                        <li>
+                        <li
+                            onClick={() => {
+                                navigate("/introduction");
+                            }}
+                        >
                             <p>연구실 소개</p>
                             <hr />
                         </li>
-                        <li>
+                        <li
+                            onClick={() => {
+                                navigate("/member");
+                            }}
+                        >
                             <p>구성원</p>
                             <hr />
                         </li>
-                        <li>
+                        <li
+                            onClick={() => {
+                                navigate("/project");
+                            }}
+                        >
                             <p>프로젝트</p>
                             <hr />
                         </li>
-                        <li>
+                        <li
+                            onClick={() => {
+                                navigate("/news");
+                            }}
+                        >
                             <p>소식</p>
                             <hr />
                         </li>

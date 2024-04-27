@@ -2,8 +2,8 @@
 // 서비스
 // 컴포넌트
 // 섹션
-import Footer from "@/components/footer/component";
 import IntroductionSection from "./sections/introduction/section";
+import NewsSection from "./sections/news/section";
 import ProjectSection from "./sections/project/section";
 import SummarySection from "./sections/summary/section";
 import WelcomeSection from "./sections/welcome/section";
@@ -17,8 +17,8 @@ const MainPage = () => {
             <WelcomeSection />
             <SummarySection />
             <IntroductionSection />
-            {/* <ProjectSection /> */}
-            <Footer />
+            <NewsSection />
+            <ProjectSection />
         </div>
     );
 };

@@ -28,7 +28,30 @@
 #summarySection .article .articleContent {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    gap: 4rem;
     width: 100%;
+}
+
+#summarySection .article .articleContent > .labDescWrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    width: 100%;
+    max-width: 58rem;
+}
+
+#summarySection .article .articleContent > .labDescWrap > .title {
+    font-size: var(--title-medium);
+    font-weight: var(--title-weight);
+    color: var(--title-color);
+}
+
+#summarySection .article .articleContent > .labDescWrap > .context {
+    font-size: var(--body-medium);
+    font-weight: var(--body-weight);
+    color: var(--body-color);
 }
 
 #summarySection .article .articleContent > .infoWrap {
