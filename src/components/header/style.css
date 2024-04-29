@@ -36,9 +36,17 @@
     transition: color 0.25s;
     cursor: pointer;
 }
+
+.header .headerContainer > .logoWrap > svg {
+    width: fit-content;
+    height: 1.25rem;
+    user-select: none;
+}
 .header.activate .headerContainer > .logoWrap,
-.header:hover .headerContainer > .logoWrap {
-    color: #000000;
+.header:hover .headerContainer > .logoWrap,
+.header.activate .headerContainer > .logoWrap > svg,
+.header:hover .headerContainer > .logoWrap > svg {
+    filter: brightness(-100%);
 }
 .header .headerContainer > .menuWrap {
 }

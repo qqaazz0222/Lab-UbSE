@@ -1,9 +1,13 @@
 // 라이브러리
+import { Map, MapMarker } from "react-kakao-maps-sdk";
 // 서비스
 // 컴포넌트
 // 아이콘
 // 이미지
 import MMK from "@/assets/images/professor-mmk.png";
+import Field1 from "@/assets/images/ubse-field-1.png";
+import Field2 from "@/assets/images/ubse-field-2.png";
+import Field3 from "@/assets/images/ubse-field-3.png";
 // 스타일
 import "./style.css";
 
@@ -33,7 +37,7 @@ const IntroductionPage = () => {
                 <h1 className="title">연구 분야</h1>
                 <div className="fieldWrap">
                     <div className="field">
-                        <img src="" alt="" className="thumb" />
+                        <img src={Field1} alt="" className="thumb" />
                         <h3 className="title">소프트웨어 재사용 기술</h3>
                         <p className="desc">
                             소프트웨어 컴포넌트, 웹 서비스, 소프트웨어
@@ -45,7 +49,7 @@ const IntroductionPage = () => {
                         </p>
                     </div>
                     <div className="field">
-                        <img src="" alt="" className="thumb" />
+                        <img src={Field2} alt="" className="thumb" />
                         <h3 className="title">RFID 미들웨어 기술</h3>
                         <p className="desc">
                             RFID 미들웨어 개발 및 RFID 기반 어플리케이션 개발
@@ -58,7 +62,7 @@ const IntroductionPage = () => {
                         </p>
                     </div>
                     <div className="field">
-                        <img src="" alt="" className="thumb" />
+                        <img src={Field3} alt="" className="thumb" />
                         <h3 className="title">소프트웨어 모델링 및 분석</h3>
                         <p className="desc">
                             소프트웨어 개발 프로세스는 소프트웨어 제품을
@@ -118,7 +122,41 @@ const IntroductionPage = () => {
                     </div>
                 </div>
             </div>
-            <div className="article full">2</div>
+            <div className="article article4">
+                <h1 className="title">오시는 길</h1>
+                <a
+                    className="placeWrap"
+                    href="https://map.kakao.com/link/map/UbSE,35.14532844499781,129.00732031975863"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    <Map
+                        level={3}
+                        center={{
+                            lat: 35.14532844499781,
+                            lng: 129.00732031975863,
+                        }}
+                        style={{
+                            width: "100%",
+                            height: "500px",
+                            borderRadius: "0.375rem",
+                            boxShadow: "0 0 14rem rgb(0 0 0 / 3%)",
+                        }}
+                    >
+                        <MapMarker
+                            style={{ border: "tranparent" }}
+                            position={{
+                                lat: 35.14532844499781,
+                                lng: 129.00732031975863,
+                            }}
+                        ></MapMarker>
+                    </Map>
+                    <p className="placeInfo">
+                        부산 사상구 주례로 47 동서대학교 뉴밀레니엄관 2층 246호
+                        (클릭시 카카오맵으로 이동됩니다.)
+                    </p>
+                </a>
+            </div>
         </div>
     );
 };

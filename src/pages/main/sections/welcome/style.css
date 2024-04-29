@@ -24,12 +24,31 @@
 }
 
 #welcomeSection .fgWrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     position: absolute;
     top: 0;
     left: 0;
     width: 100svw;
     height: 100svh;
     background-color: #00000060;
+}
+
+#welcomeSection .fgWrap > .displayWrap {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    color: #ffffff;
+    overflow: hidden;
+}
+#welcomeSection .fgWrap > .displayWrap > img {
+    width: calc(100% - var(--screen-margin));
+    max-width: 32rem;
+    user-select: none;
 }
 
 #welcomeSection .hintWrap {

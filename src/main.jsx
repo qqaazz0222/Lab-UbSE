@@ -8,6 +8,7 @@ import RootLayout from "./layouts/root/layout";
 import MainPage from "./pages/main/page";
 import IntroductionPage from "./pages/introduction/page";
 import MemberPage from "./pages/member/page";
+import ProjectPage from "./pages/project/page";
 // 스타일
 import "./index.css";
 import "./custom.css";
@@ -27,6 +28,10 @@ const router = createBrowserRouter([
             {
                 path: "/member",
                 element: <MemberPage />,
+            },
+            {
+                path: "/project",
+                element: <ProjectPage />,
             },
         ],
     },

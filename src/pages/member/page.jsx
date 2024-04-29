@@ -4,7 +4,6 @@
 // 섹션
 // 아이콘
 // 이미지
-import BG from "@/assets/images/dsu-pic-1.jpg";
 // 데이터
 import { professor, undergraduate, graduate } from "./data";
 // 스타일
