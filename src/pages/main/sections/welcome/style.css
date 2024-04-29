@@ -46,7 +46,7 @@
     overflow: hidden;
 }
 #welcomeSection .fgWrap > .displayWrap > img {
-    width: calc(100% - var(--screen-margin));
+    width: calc(100% - var(--screen-margin-2x));
     max-width: 32rem;
     user-select: none;
 }
@@ -105,4 +105,15 @@
     font-size: 0.875rem;
     font-weight: 600;
     color: #ffffff;
+}
+
+@media (max-width: 1024px) {
+}
+/* 모바일 */
+@media (max-width: 768px) {
+    #welcomeSection .fgWrap > .displayWrap > img {
+        width: calc(100% - var(--screen-margin-2x));
+        max-width: 20rem;
+        user-select: none;
+    }
 }

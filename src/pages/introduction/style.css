@@ -216,7 +216,7 @@
 @media (max-width: 768px) {
     #introductionPage > .article {
         margin: 3rem 0;
-        width: calc(100% - var(--screen-margin-mobile-2x));
+        width: calc(100% - var(--screen-margin-2x));
     }
     #introductionPage > .article2 > .fieldWrap {
         display: flex;

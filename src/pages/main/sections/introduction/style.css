@@ -144,3 +144,39 @@
     font-size: var(--body-small);
     font-weight: var(--body-weight);
 }
+
+@media (max-width: 1024px) {
+}
+/* 모바일 */
+@media (max-width: 768px) {
+    #introductionSection .article .articleTitle {
+        text-align: center;
+    }
+    .filedWrap > .infoGraphicWrap > .infoItemWrap {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 10rem;
+        height: 10rem;
+        border-radius: 50%;
+        font-size: var(--title-small);
+        font-weight: var(--title-weight);
+        color: #ffffff;
+    }
+
+    .filedWrap > .infoGraphicWrap > .infoItemWrap:nth-child(1) {
+        background-color: var(--primary-color-var-2);
+        transform: translateX(1.5rem);
+        z-index: 1;
+    }
+    .filedWrap > .infoGraphicWrap > .infoItemWrap:nth-child(2) {
+        background-color: var(--primary-color-var-3);
+        z-index: 2;
+    }
+    .filedWrap > .infoGraphicWrap > .infoItemWrap:nth-child(3) {
+        background-color: var(--primary-color);
+        transform: translateX(-1.5rem);
+        z-index: 3;
+    }
+}

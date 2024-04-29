@@ -17,11 +17,16 @@ const IntroductionSection = () => {
                     <div className="filedWrap">
                         <div className="infoGraphicWrap">
                             <div className="infoItemWrap">
-                                소프트웨어 재사용
+                                <span>소프트웨어</span>
+                                <span>재사용</span>
                             </div>
-                            <div className="infoItemWrap">RFID 미들웨어</div>
                             <div className="infoItemWrap">
-                                소프트웨어 모델링 및 분석
+                                <span>RFID</span>
+                                <span>미들웨어</span>
+                            </div>
+                            <div className="infoItemWrap">
+                                <span>소프트웨어</span>
+                                <span>모델링 및 분석</span>
                             </div>
                         </div>
                         <div className="infoWrap">

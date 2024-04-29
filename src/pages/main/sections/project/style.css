@@ -165,3 +165,21 @@
     font-weight: var(--desc-weight);
     color: var(--desc-color);
 }
+
+@media (max-width: 1024px) {
+    #projectSection .article .articleContent > .projectWrap {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+        width: 100%;
+    }
+}
+/* 모바일 */
+@media (max-width: 768px) {
+    #projectSection .article .articleContent > .projectWrap {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1.25rem;
+        width: 100%;
+    }
+}

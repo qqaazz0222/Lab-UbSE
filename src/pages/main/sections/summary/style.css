@@ -20,6 +20,10 @@
 }
 
 #summarySection .article .articleTitle {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5rem;
     font-size: var(--heading-large);
     font-weight: var(--heading-weight);
     color: var(--heading-color);
@@ -126,4 +130,36 @@
     font-weight: var(--body-weight);
     color: var(--body-color);
     user-select: none;
+}
+
+@media (max-width: 1024px) {
+}
+/* 모바일 */
+@media (max-width: 768px) {
+    #summarySection .article .articleTitle {
+        line-height: var(--heading-large);
+        flex-direction: column;
+    }
+    #summarySection .article .articleContent > .infoWrap {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    #summarySection .article .articleContent > .infoWrap > .infoItem {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+        padding: 2rem 0;
+        border-right: none;
+        border-bottom: 1px solid var(--border-color);
+    }
+    #summarySection
+        .article
+        .articleContent
+        > .infoWrap
+        > .infoItem:last-child {
+        border-bottom: none;
+    }
 }

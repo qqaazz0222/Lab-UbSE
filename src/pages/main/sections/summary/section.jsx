@@ -12,7 +12,10 @@ const SummarySection = () => {
     return (
         <div id="summarySection" className="section">
             <div className="article">
-                <h1 className="articleTitle">개발자로의 첫걸음, UbSE에서</h1>
+                <h1 className="articleTitle">
+                    <span>개발자로의 첫걸음,</span>
+                    <span>UbSE에서</span>
+                </h1>
                 <div className="articleContent">
                     <div className="labDescWrap">
                         <h3 className="title">

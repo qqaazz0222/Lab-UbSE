@@ -60,13 +60,13 @@
     color: #ffffff;
 }
 
-.newsItem {
+#newsSection .newsItem {
     display: flex;
     flex-direction: column;
     cursor: pointer;
 }
 
-.newsItem > .thumbWrap {
+#newsSection .newsItem > .thumbWrap {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -80,18 +80,18 @@
     overflow: hidden;
 }
 
-.newsItem > .thumbWrap > img {
+#newsSection .newsItem > .thumbWrap > img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     transition: transform 0.5s;
 }
 
-.newsItem:hover > .thumbWrap > img {
+#newsSection .newsItem:hover > .thumbWrap > img {
     transform: scale(1.05);
 }
 
-.newsItem > .thumbWrap > .iconWrap {
+#newsSection .newsItem > .thumbWrap > .iconWrap {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -105,13 +105,13 @@
     border-radius: 50%;
 }
 
-.newsItem > .thumbWrap > .iconWrap > svg {
+#newsSection .newsItem > .thumbWrap > .iconWrap > svg {
     width: 1.25rem;
     height: 1.25rem;
     stroke-width: 2.1;
 }
 
-.newsItem > .tagWrap {
+#newsSection .newsItem > .tagWrap {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -119,12 +119,12 @@
     margin-bottom: 0.375rem;
 }
 
-.newsItem > .tagWrap > .tag {
+#newsSection .newsItem > .tagWrap > .tag {
     font-size: var(--body-medium);
     font-weight: 500;
     color: var(--body-color);
 }
-.newsItem > .title {
+#newsSection .newsItem > .title {
     display: -webkit-box;
     margin-bottom: 0.625rem;
     width: 100%;
@@ -137,8 +137,26 @@
     text-overflow: ellipsis;
     overflow: hidden;
 }
-.newsItem > .created {
+#newsSection .newsItem > .created {
     font-size: var(--desc-medium);
     font-weight: var(--desc-weight);
     color: var(--desc-color);
+}
+
+@media (max-width: 1024px) {
+    #newsSection .article .articleContent > .newsWrap {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+        width: 100%;
+    }
+}
+/* 모바일 */
+@media (max-width: 768px) {
+    #newsSection .article .articleContent > .newsWrap {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        width: 100%;
+    }
 }

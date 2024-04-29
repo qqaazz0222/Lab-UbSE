@@ -34,7 +34,7 @@
     flex-direction: column;
     justify-content: center;
     padding-top: 4.5rem;
-    width: 100%;
+    width: calc(100% - var(--screen-margin-2x));
     max-width: var(--max-content-width);
     height: 100%;
     z-index: 1;
@@ -58,7 +58,7 @@
     justify-content: center;
     gap: 3rem;
     margin: 4rem 0;
-    width: 100%;
+    width: calc(100% - var(--screen-margin-2x));
     max-width: var(--max-content-width);
 }
 
@@ -155,4 +155,21 @@
     font-size: var(--body-small);
     font-weight: var(--title-weight);
     color: var(--title-color);
+}
+@media (max-width: 1024px) {
+    #memberPage > .article > .memberContainer > .memberWrap {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem;
+        width: 100%;
+    }
+}
+/* 모바일 */
+@media (max-width: 768px) {
+    #memberPage > .article > .memberContainer > .memberWrap {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        width: 100%;
+    }
 }
