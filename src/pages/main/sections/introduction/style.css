@@ -54,7 +54,7 @@
     justify-content: center;
     gap: 4rem;
     width: 100%;
-    max-width: 58rem;
+    max-width: var(--max-content-width-small);
 }
 
 .filedWrap > .infoGraphicWrap {

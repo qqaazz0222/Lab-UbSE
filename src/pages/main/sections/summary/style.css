@@ -39,7 +39,7 @@
     align-items: center;
     gap: 2rem;
     width: 100%;
-    max-width: 58rem;
+    max-width: var(--max-content-width-small);
 }
 
 #summarySection .article .articleContent > .labDescWrap > .title {

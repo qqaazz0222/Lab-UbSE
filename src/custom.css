@@ -28,6 +28,7 @@
     --primary-color-var-4: #9d0b45;
     --footer-bg-color: #111111;
     --max-content-width: 80rem;
+    --max-content-width-small: 58rem;
     --header-z-index: 1000;
     --section-bg-color-1: #ffffff;
     --section-bg-color-2: #f8f8f8;
@@ -55,6 +56,9 @@
     --desc-weight: 400;
     --desc-color: #999999;
     --screen-margin: 1.5rem;
+    --screen-margin-2x: 3rem;
+    --screen-margin-mobile: 1rem;
+    --screen-margin-mobile-2x: 2rem;
     --article-margin: 10rem;
     --article-gap: 4rem;
     --border-radius: 0.375rem;
@@ -66,6 +70,50 @@
 }
 /* 모바일 */
 @media (max-width: 768px) {
+    :root {
+        --primary-color: #c40352;
+        --primary-color-var-1: #eba7c4;
+        --primary-color-var-2: #df75a1;
+        --primary-color-var-3: #d3437d;
+        --primary-color-var-4: #9d0b45;
+        --footer-bg-color: #111111;
+        --max-content-width: 80rem;
+        --max-content-width-small: 58rem;
+        --header-z-index: 1000;
+        --section-bg-color-1: #ffffff;
+        --section-bg-color-2: #f8f8f8;
+        --section-z-index: 100;
+        --popup-z-index: 200;
+        --modal-z-index: 300;
+        --heading-large: 2.75rem;
+        --heading-medium: 2.375rem;
+        --heading-small: 2rem;
+        --heading-weight: 700;
+        --heading-color: #000000;
+        --title-large: 1.5rem;
+        --title-medium: 1.25rem;
+        --title-small: 1rem;
+        --title-weight: 700;
+        --title-color: #111111;
+        --body-large: 1.25rem;
+        --body-medium: 1rem;
+        --body-small: 0.875rem;
+        --body-weight: 400;
+        --body-color: #666666;
+        --desc-large: 1rem;
+        --desc-medium: 0.875rem;
+        --desc-small: 0.75rem;
+        --desc-weight: 400;
+        --desc-color: #999999;
+        --screen-margin: 1.5rem;
+        --screen-margin-2x: 3rem;
+        --screen-margin-mobile: 1rem;
+        --screen-margin-mobile-2x: 2rem;
+        --article-margin: 10rem;
+        --article-gap: 4rem;
+        --border-radius: 0.375rem;
+        --border-color: #dddddd;
+    }
 }
 
 *::selection {

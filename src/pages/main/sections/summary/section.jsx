@@ -1,4 +1,5 @@
 // 라이브러리
+import { useNavigate } from "react-router-dom";
 // 서비스
 // 컴포넌트
 // 아이콘
@@ -7,6 +8,7 @@ import { FlaskConical, Shapes, FolderKanban, ChevronRight } from "lucide-react";
 import "./style.css";
 
 const SummarySection = () => {
+    const navigate = useNavigate();
     return (
         <div id="summarySection" className="section">
             <div className="article">
@@ -36,7 +38,12 @@ const SummarySection = () => {
                         </p>
                     </div>
                     <div className="infoWrap">
-                        <div className="infoItem">
+                        <div
+                            className="infoItem"
+                            onClick={() => {
+                                navigate("/introduction");
+                            }}
+                        >
                             <div className="itemIcon">
                                 <FlaskConical />
                             </div>
@@ -48,7 +55,12 @@ const SummarySection = () => {
                                 UbSE연구회에 대해 소개합니다.
                             </div>
                         </div>
-                        <div className="infoItem">
+                        <div
+                            className="infoItem"
+                            onClick={() => {
+                                navigate("/introduction");
+                            }}
+                        >
                             <div className="itemIcon">
                                 <Shapes />
                             </div>
@@ -60,7 +72,12 @@ const SummarySection = () => {
                                 연구 분야를 알려드립니다.
                             </div>
                         </div>
-                        <div className="infoItem">
+                        <div
+                            className="infoItem"
+                            onClick={() => {
+                                navigate("/project");
+                            }}
+                        >
                             <div className="itemIcon">
                                 <FolderKanban />
                             </div>

@@ -9,6 +9,7 @@ import MainPage from "./pages/main/page";
 import IntroductionPage from "./pages/introduction/page";
 import MemberPage from "./pages/member/page";
 import ProjectPage from "./pages/project/page";
+import NewsPage from "./pages/news/page";
 // 스타일
 import "./index.css";
 import "./custom.css";
@@ -32,6 +33,10 @@ const router = createBrowserRouter([
             {
                 path: "/project",
                 element: <ProjectPage />,
+            },
+            {
+                path: "/news",
+                element: <NewsPage />,
             },
         ],
     },
