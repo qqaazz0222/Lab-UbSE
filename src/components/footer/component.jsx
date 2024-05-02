@@ -22,6 +22,7 @@ const Footer = () => {
                     <a href="https://aisw.dongseo.ac.kr/">
                         동서대학교 SW중심대학사업단
                     </a>
+                    <a href="/manage">사이트관리</a>
                 </div>
                 <div className="infoWrap">
                     <div className="descWrap">

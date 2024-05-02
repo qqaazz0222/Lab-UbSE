@@ -4,16 +4,16 @@ import { useNavigate } from "react-router-dom";
 // 서비스
 // 컴포넌트
 // 아이콘
-import { MessageSquareMore } from "lucide-react";
+import { MessageSquareMore, Menu, X } from "lucide-react";
 // 스타일
 import "./style.css";
 
 const Header = () => {
-    console.log(window.location.pathname);
     const navigate = useNavigate();
     const [isTop, setIsTop] = useState(true);
     const [scrollDirection, setScrollDirection] = useState("up");
     const [isHidden, setIsHidden] = useState(false);
+    const [menuState, setMenuState] = useState(false);
     let preScrollY = 0;
     const scrollHandler = (e) => {
         const curScrollY = window.scrollY;
@@ -36,6 +36,17 @@ const Header = () => {
             }
         }
         preScrollY = curScrollY;
+    };
+    const menuHandler = (state) => {
+        const target = document.querySelector(".menuContainer");
+        if (state) {
+            setMenuState(true);
+        } else {
+            target.style.animation = "fadeOut 0.75s forwards";
+            setTimeout(function () {
+                setMenuState(false);
+            }, 750);
+        }
     };
     useEffect(() => {
         window.addEventListener("scroll", scrollHandler);
@@ -142,12 +153,71 @@ const Header = () => {
                     </ul>
                 </div>
                 <div className="funcWrap">
-                    <button>
+                    <button className="contact">
                         연락하기
                         <MessageSquareMore />
                     </button>
+                    <button
+                        className="menu"
+                        onClick={() => {
+                            menuHandler(true);
+                        }}
+                    >
+                        <Menu />
+                    </button>
                 </div>
             </div>
+            {menuState && (
+                <div className="menuContainer">
+                    <div className="funcWrap">
+                        <button
+                            onClick={() => {
+                                menuHandler(false);
+                            }}
+                        >
+                            <X />
+                        </button>
+                    </div>
+                    <ul>
+                        <li
+                            onClick={() => {
+                                navigate("/introduction");
+                                menuHandler(false);
+                            }}
+                        >
+                            <p>연구실 소개</p>
+                            <hr />
+                        </li>
+                        <li
+                            onClick={() => {
+                                navigate("/member");
+                                menuHandler(false);
+                            }}
+                        >
+                            <p>구성원</p>
+                            <hr />
+                        </li>
+                        <li
+                            onClick={() => {
+                                navigate("/project");
+                                menuHandler(false);
+                            }}
+                        >
+                            <p>프로젝트</p>
+                            <hr />
+                        </li>
+                        <li
+                            onClick={() => {
+                                navigate("/news");
+                                menuHandler(false);
+                            }}
+                        >
+                            <p>소식</p>
+                            <hr />
+                        </li>
+                    </ul>
+                </div>
+            )}
         </div>
     );
 };
