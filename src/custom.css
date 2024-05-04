@@ -30,6 +30,8 @@
     --max-content-width: 80rem;
     --max-content-width-small: 58rem;
     --header-z-index: 1000;
+    --dialog-z-index: 1001;
+    --dialog-max-width: 24rem;
     --section-bg-color-1: #ffffff;
     --section-bg-color-2: #f8f8f8;
     --section-z-index: 100;

@@ -1,0 +1,159 @@
+.dialogWrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100svw;
+    height: 100svh;
+    background-color: #00000066;
+    z-index: var(--dialog-z-index);
+    opacity: 0;
+    animation: dialogWrapFadeIn 0.5s forwards;
+}
+
+.dialogWrap > .dialog {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 2rem;
+    width: calc(100% - var(--screen-margin-2x));
+    max-width: var(--dialog-max-width);
+    background-color: #ffffff;
+    border-radius: var(--border-radius);
+    opacity: 0;
+    transform: translateY(10%);
+    animation: dialogFadeIn 0.5s forwards;
+}
+
+.dialogWrap > .dialog > .dialogHeader {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    width: 100%;
+}
+
+.dialogWrap > .dialog > .dialogHeader > h1 {
+    font-size: var(--title-medium);
+    font-weight: var(--title-weight);
+    color: var(--title-color);
+}
+.dialogWrap > .dialog > .dialogHeader > p {
+    font-size: var(--desc-medium);
+    font-weight: var(--desc-weight);
+    color: var(--desc-color);
+}
+
+.dialogWrap > .dialog > .dialogBody {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    width: 100%;
+}
+
+.dialogWrap > .dialog > .dialogBody > .dialogGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    width: 100%;
+}
+
+.dialogWrap > .dialog > .dialogBody > .dialogGroup > h3 {
+    font-size: var(--body-small);
+    font-weight: var(--body-weight);
+    color: var(--body-color);
+}
+
+select,
+.dialogWrap > .dialog > .dialogBody > .dialogGroup > input,
+.dialogWrap > .dialog > .dialogBody > .dialogGroup > select {
+    /* -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none; */
+    padding: 0.5rem 0.75rem;
+    background-color: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    outline: none;
+    transition: border 0.3s;
+}
+select:hover,
+.dialogWrap > .dialog > .dialogBody > .dialogGroup > input:hover,
+.dialogWrap > .dialog > .dialogBody > .dialogGroup > select:hover {
+    border: 1px solid var(--desc-color);
+}
+select:focus,
+.dialogWrap > .dialog > .dialogBody > .dialogGroup > input:focus,
+.dialogWrap > .dialog > .dialogBody > .dialogGroup > select:focus {
+    border: 1px solid var(--title-color);
+}
+
+.dialogWrap > .dialog > .dialogBody > .dialogGroup.target {
+    padding: 1.5rem;
+    background-color: var(--section-bg-color-2);
+    border-radius: var(--border-radius);
+    font-size: var(--body-medium);
+    font-weight: var(--body-weight);
+    color: var(--body-color);
+    text-align: center;
+}
+
+.dialogWrap > .dialog > .dialogFooter {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+    width: 100%;
+}
+
+.dialogWrap > .dialog > .dialogFooter > button {
+    flex: 1;
+    padding: 0.75rem;
+    background-color: var(--section-bg-color-1);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    font-size: var(--body-medium);
+    font-weight: 500;
+    color: var(--body-color);
+    transition: background-color 0.3s, border 0.3s;
+}
+
+.dialogWrap > .dialog > .dialogFooter > button:hover,
+.dialogWrap > .dialog > .dialogFooter > button:focus {
+    background-color: var(--section-bg-color-2);
+}
+
+.dialogWrap > .dialog > .dialogFooter > button:last-child {
+    background-color: var(--title-color);
+    border: 1px solid var(--title-color);
+    border-radius: var(--border-radius);
+    font-size: var(--body-medium);
+    color: #ffffff;
+}
+
+.dialogWrap > .dialog > .dialogFooter > button:last-child:hover,
+.dialogWrap > .dialog > .dialogFooter > button:last-child:focus {
+    background-color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+}
+
+@keyframes dialogWrapFadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes dialogFadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(10%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

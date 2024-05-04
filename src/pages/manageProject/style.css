@@ -1,0 +1,226 @@
+#introductionPage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 4.5rem;
+    background-color: var(--section-bg-color-2);
+}
+
+#introductionPage > .article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    margin: 4rem 0;
+    width: calc(100% - var(--screen-margin-2x));
+    max-width: var(--max-content-width);
+}
+
+#introductionPage > .article.full {
+    max-width: 100%;
+}
+
+#introductionPage > .article > .title {
+    font-size: var(--heading-medium);
+    font-weight: var(--heading-weight);
+    color: var(--heading-color);
+}
+
+#introductionPage > .article1 > .eng {
+    line-height: var(--title-medium);
+    font-size: var(--title-medium);
+    font-weight: var(--title-weight);
+    color: var(--primary-color);
+    text-align: center;
+}
+
+#introductionPage > .article1 > .kor {
+    margin-bottom: 3rem;
+    font-size: var(--heading-large);
+    font-weight: var(--heading-weight);
+    color: var(--heading-color);
+    text-align: center;
+}
+
+#introductionPage > .article1 > .desc {
+    width: 100%;
+    max-width: var(--max-content-width-small);
+    font-size: var(--body-medium);
+    font-weight: var(--body-weight);
+    color: var(--body-color);
+}
+
+#introductionPage > .article2 > .fieldWrap {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+}
+
+#introductionPage > .article2 > .fieldWrap > .field {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+#introductionPage > .article2 > .fieldWrap > .field > .thumb {
+    margin-bottom: 1.5rem;
+    width: 100%;
+    height: 12rem;
+    border-radius: var(--border-radius);
+    object-fit: cover;
+}
+
+#introductionPage > .article2 > .fieldWrap > .field > .title {
+    margin-bottom: 0.75rem;
+    font-size: var(--title-medium);
+    font-weight: var(--title-weight);
+    color: var(--title-color);
+}
+
+#introductionPage > .article2 > .fieldWrap > .field > .desc {
+    font-size: var(--body-medium);
+    font-weight: var(--body-weight);
+    color: var(--body-color);
+}
+
+#introductionPage > .article3 > .professorWrap {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 4rem 10rem 4rem 0;
+    position: relative;
+    width: 100%;
+    height: 20rem;
+    background-color: #ffffff;
+    border-radius: 0 20rem 20rem 0;
+}
+
+#introductionPage > .article3 > .professorWrap > img {
+    position: absolute;
+    left: 2rem;
+    bottom: 0;
+    height: 32rem;
+}
+
+#introductionPage > .article3 > .professorWrap > .contentWrap {
+    display: flex;
+    flex-direction: column;
+    width: 65%;
+}
+
+#introductionPage > .article3 > .professorWrap > .contentWrap > .comment {
+    margin-bottom: 2rem;
+    text-align: center;
+    font-size: var(--heading-medium);
+    font-weight: var(--heading-weight);
+    color: var(--primary-color);
+    background-image: linear-gradient(
+        to right bottom,
+        var(--primary-color),
+        var(--primary-color-var-4)
+    );
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+#introductionPage > .article3 > .professorWrap > .contentWrap > .name {
+    font-size: var(--title-medium);
+    font-weight: var(--title-weight);
+    color: var(--title-color);
+}
+
+#introductionPage > .article3 > .professorWrap > .contentWrap > .rank {
+    font-size: var(--body-medium);
+    font-weight: var(--body-weight);
+    color: var(--body-color);
+}
+
+#introductionPage > .article3 > .infoWrap {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    max-width: var(--max-content-width-small);
+    gap: 2rem;
+}
+
+#introductionPage > .article3 > .infoWrap > .leftWrap {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+#introductionPage > .article3 > .infoWrap > .rightWrap {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+#introductionPage > .article3 > .infoWrap > .leftWrap .subTitle,
+#introductionPage > .article3 > .infoWrap > .rightWrap .subTitle {
+    margin-bottom: 0.25rem;
+    font-size: var(--title-medium);
+    font-weight: var(--title-weight);
+    color: var(--title-color);
+}
+
+#introductionPage > .article3 > .infoWrap > .leftWrap > ul,
+#introductionPage > .article3 > .infoWrap > .rightWrap > ul {
+    margin-bottom: 1rem;
+}
+
+#introductionPage > .article3 > .infoWrap > .leftWrap > ul > li,
+#introductionPage > .article3 > .infoWrap > .rightWrap > ul > li {
+    margin-left: 1.5rem;
+    list-style-type: disc;
+    font-size: var(--body-medium);
+    font-weight: var(--body-weight);
+    color: var(--body-color);
+}
+
+#introductionPage > .article4 > .placeWrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: var(--max-content-width);
+    border-radius: var(--border-radius);
+    background-color: var(--section-bg-color-1);
+    box-shadow: 0 0 14rem rgb(0 0 0 / 3%);
+}
+
+#introductionPage > .article4 > .placeWrap > .placeInfo {
+    padding: 1rem;
+    font-size: var(--body-medium);
+    font-weight: var(--body-weight);
+    color: var(--body-color);
+    transition: color 0.3s;
+}
+#introductionPage > .article4 > .placeWrap:hover > .placeInfo {
+    color: var(--primary-color);
+}
+
+@media (max-width: 1024px) {
+    #introductionPage > .article {
+        margin: 3rem 0;
+        width: calc(100% - var(--screen-margin-2x));
+    }
+    #introductionPage > .article2 > .fieldWrap {
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+    }
+}
+/* 모바일 */
+@media (max-width: 768px) {
+    #introductionPage > .article {
+        margin: 3rem 0;
+        width: calc(100% - var(--screen-margin-2x));
+    }
+    #introductionPage > .article2 > .fieldWrap {
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+    }
+}

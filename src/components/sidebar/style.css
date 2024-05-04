@@ -1,0 +1,77 @@
+/* PC */
+#sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 2rem 1.5rem;
+    width: 16rem;
+    height: 100svh;
+    background-color: var(--section-bg-color-1);
+    z-index: var(--header-z-index);
+    box-shadow: 0 0 14rem rgb(0 0 0 / 10%);
+}
+
+#sidebar > .logoWrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+#sidebar > .logoWrap > svg {
+    width: 80%;
+    color: var(--heading-color);
+}
+#sidebar > .menuWrap {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    width: 100%;
+}
+#sidebar > .menuWrap > .menuTitle {
+    padding: 0 0.5rem;
+    font-size: var(--body-small);
+    font-weight: var(--body-weight);
+    color: var(--body-color);
+}
+
+#sidebar > .menuWrap > ul {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+#sidebar > .menuWrap > ul > li {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5rem;
+    margin-left: 0;
+    padding: 0.5rem 0.75rem;
+    background-color: var(--section-bg-color-2);
+    border-radius: var(--border-radius);
+    font-size: var(--body-medium);
+    font-weight: 500;
+    color: var(--title-color);
+    transition: background-color 0.3s, color 0.3s;
+}
+#sidebar > .menuWrap > ul > li:hover {
+    background-color: var(--border-color);
+}
+#sidebar > .menuWrap > ul > li.activate {
+    background-color: var(--primary-color);
+    color: #ffffff;
+}
+
+#sidebar > .menuWrap > ul > li > svg {
+    width: 1rem;
+    height: 1rem;
+}
+/* 태블릿 */
+@media (max-width: 1024px) {
+}
+/* 모바일 */
+@media (max-width: 768px) {
+}

@@ -1,0 +1,193 @@
+#manageMemberPage {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    padding: 3rem 2rem;
+    width: 100%;
+}
+
+#manageMemberPage .memberContainer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+#manageMemberPage > .memberContainer > .headerWrap {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+}
+
+#manageMemberPage > .memberContainer > .headerWrap > .title {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    font-size: var(--title-large);
+    font-weight: var(--title-weight);
+    color: var(--title-color);
+}
+
+#manageMemberPage > .memberContainer > .headerWrap > .title > span {
+    margin-left: 0.25rem;
+    font-size: var(--title-small);
+    font-weight: var(--title-weight);
+    color: var(--primary-color);
+}
+
+#manageMemberPage > .memberContainer > .headerWrap > .funcWrap {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+#manageMemberPage > .memberContainer > .headerWrap > .funcWrap > button {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.25rem;
+    padding: 0.5rem 0.625rem;
+    background-color: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    font-size: var(--body-medium);
+    font-weight: var(--title-weight);
+    color: var(--title-color);
+    transition: border 0.3s;
+}
+
+#manageMemberPage > .memberContainer > .headerWrap > .funcWrap > button:hover {
+    border: 1px solid var(--title-color);
+}
+
+#manageMemberPage > .memberContainer > .headerWrap > .funcWrap > button > svg {
+    width: 1rem;
+    height: 1rem;
+    stroke-width: 3px;
+}
+
+#manageMemberPage > .memberContainer > .memberWrap {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    width: 100%;
+}
+
+.memberItem {
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem;
+    width: 100%;
+    max-width: 100%;
+    background-color: #ffffff;
+    border-radius: var(--border-radius);
+    box-shadow: 0 0 14rem rgb(0 0 0 / 3%);
+}
+
+.memberItem > .profile {
+    margin-bottom: 1rem;
+    width: 4rem;
+    height: 4rem;
+    border: 1px solid var(--border-color);
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.memberItem > .name {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: var(--title-small);
+    font-weight: var(--title-weight);
+    color: var(--title-color);
+}
+
+.memberItem > .name > span {
+    font-size: var(--body-small);
+    font-weight: var(--body-weight);
+    color: var(--primary-color);
+}
+.memberItem > .email {
+    font-size: var(--desc-medium);
+    font-weight: var(--desc-weight);
+    color: var(--desc-color);
+}
+
+.memberItem > .subTitle {
+    margin-top: 0.75rem;
+    margin-bottom: 0.25rem;
+    font-size: var(--body-small);
+    font-weight: var(--title-weight);
+    color: var(--title-color);
+}
+.memberItem > .fieldWrap {
+}
+.memberItem > .fieldWrap > .field {
+    list-style-type: disc;
+    margin-left: 1rem;
+    font-size: var(--body-small);
+    font-weight: var(--body-weight);
+    color: var(--body-color);
+}
+
+.memberItem > .company {
+    margin-top: 0.75rem;
+    font-size: var(--body-small);
+    font-weight: var(--title-weight);
+    color: var(--title-color);
+}
+
+.memberItem > .funcWrap {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.memberItem > .funcWrap > button {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.25rem;
+    padding: 0.75rem;
+    background-color: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    font-size: var(--body-small);
+    font-weight: var(--title-weight);
+    color: var(--title-color);
+    transition: border 0.3s;
+}
+
+.memberItem > .funcWrap > button:hover {
+    border: 1px solid var(--title-color);
+}
+
+.memberItem > .funcWrap > button > svg {
+    width: 1rem;
+    height: 1rem;
+    stroke-width: 2px;
+}
+
+@media (max-width: 1024px) {
+    #manageMemberPage > .article > .memberContainer > .memberWrap {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem;
+        width: 100%;
+    }
+}
+/* 모바일 */
+@media (max-width: 768px) {
+    #manageMemberPage > .article > .memberContainer > .memberWrap {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        width: 100%;
+    }
+}

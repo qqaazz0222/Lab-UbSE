@@ -1,0 +1,14 @@
+#dashboardLayout {
+    display: flex;
+    flex-direction: column;
+    width: 100svw;
+    min-height: 100svh;
+    background-color: var(--section-bg-color-2);
+}
+
+#dashboardLayout .contentArea {
+    display: flex;
+    flex-direction: column;
+    padding-left: 16rem;
+    width: 100svw;
+}

@@ -1,0 +1,113 @@
+#authPage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100svw;
+    min-height: 100svh;
+    background-color: var(--section-bg-color-2);
+}
+
+#authPage .article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    width: calc(100% - var(--screen-margin-2x));
+    max-width: var(--max-content-width);
+}
+
+#authPage .article > .authContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 2rem;
+    width: 100%;
+    max-width: 24rem;
+    background-color: var(--section-bg-color-1);
+    border-radius: var(--border-radius);
+    box-shadow: 0 0 14rem rgb(0 0 0 / 3%);
+}
+
+#authPage .article > .authContainer > .authHeader {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.625rem;
+}
+
+#authPage .article > .authContainer > .authHeader > .iconWrap {
+    padding: 0.5rem;
+    background-color: var(--title-color);
+    border-radius: 0.5rem;
+}
+#authPage .article > .authContainer > .authHeader > .iconWrap > svg {
+    width: 1rem;
+    height: 1rem;
+    stroke-width: 2px;
+    color: #ffffff;
+}
+#authPage .article > .authContainer > .authHeader > p {
+    font-size: var(--title-medium);
+    font-weight: var(--title-weight);
+    color: var(--title-color);
+}
+
+#authPage .article > .authContainer > .authBody {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+#authPage .article > .authContainer > .authBody > .inputWrap {
+    display: flex;
+    flex-direction: row;
+    align-self: center;
+    gap: 0.5rem;
+    width: 100%;
+}
+#authPage .article > .authContainer > .authBody > .inputWrap > input {
+    flex: 1;
+    padding: 0.5rem 0.75rem;
+    border: 1px solid var(--border-color);
+    border-radius: 0.5rem;
+    outline: none;
+    transition: border 0.3s;
+}
+#authPage .article > .authContainer > .authBody > .inputWrap > input:hover {
+    border: 1px solid var(--desc-color);
+}
+#authPage .article > .authContainer > .authBody > .inputWrap > input:focus {
+    border: 1px solid var(--title-color);
+}
+
+#authPage .article > .authContainer > .authBody > .inputWrap > button {
+    padding: 0.5rem 0.75rem;
+    background-color: var(--section-bg-color-2);
+    border: 1px solid var(--border-color);
+    border-radius: 0.5rem;
+}
+#authPage .article > .authContainer > .authBody > .inputWrap > button > svg {
+    width: 1rem;
+    height: 1rem;
+    color: var(--color-color);
+}
+
+#authPage .article > .authContainer > .authBody > .authBtn {
+    padding: 0.75rem 1rem;
+    background-color: var(--title-color);
+    border-radius: 0.5rem;
+    font-size: var(--body-medium);
+    font-weight: 500;
+    color: #ffffff;
+    transition: background-color 0.3s;
+}
+
+#authPage .article > .authContainer > .authBody > .authBtn:hover {
+    background-color: var(--heading-color);
+}
+
+@media (max-width: 1024px) {
+}
+/* 모바일 */
+@media (max-width: 768px) {
+}
