@@ -2,6 +2,11 @@
 import { useState } from "react";
 // 서비스
 // 컴포넌트
+import {
+    MemberCreateDialog,
+    MemberUpdateDialog,
+    MemberDeleteDialog,
+} from "@/components/dialog/component";
 // 아이콘
 // 이미지
 import { Pen, Plus, Trash2 } from "lucide-react";
@@ -9,11 +14,6 @@ import { Pen, Plus, Trash2 } from "lucide-react";
 import { professor, undergraduate, graduate } from "./data";
 // 스타일
 import "./style.css";
-import {
-    MemberCreateDialog,
-    MemberUpdateDialog,
-    MemberDeleteDialog,
-} from "@/components/dialog/component";
 
 const dataForm = { name: "", email: "", field: [], graduated: 0, company: "" };
 
