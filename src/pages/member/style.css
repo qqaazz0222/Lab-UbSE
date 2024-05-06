@@ -92,7 +92,7 @@
     width: 100%;
 }
 
-.memberItem {
+#memberPage .memberItem {
     display: flex;
     flex-direction: column;
     padding: 1.5rem;
@@ -103,7 +103,7 @@
     box-shadow: 0 0 14rem rgb(0 0 0 / 3%);
 }
 
-.memberItem > .profile {
+#memberPage .memberItem > .profile {
     margin-bottom: 1rem;
     width: 4rem;
     height: 4rem;
@@ -112,7 +112,7 @@
     object-fit: cover;
 }
 
-.memberItem > .name {
+#memberPage .memberItem > .name {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -122,27 +122,27 @@
     color: var(--title-color);
 }
 
-.memberItem > .name > span {
+#memberPage .memberItem > .name > span {
     font-size: var(--body-small);
     font-weight: var(--body-weight);
     color: var(--primary-color);
 }
-.memberItem > .email {
+#memberPage .memberItem > .email {
     font-size: var(--desc-medium);
     font-weight: var(--desc-weight);
     color: var(--desc-color);
 }
 
-.memberItem > .subTitle {
+#memberPage .memberItem > .subTitle {
     margin-top: 0.75rem;
     margin-bottom: 0.25rem;
     font-size: var(--body-small);
     font-weight: var(--title-weight);
     color: var(--title-color);
 }
-.memberItem > .fieldWrap {
+#memberPage .memberItem > .fieldWrap {
 }
-.memberItem > .fieldWrap > .field {
+#memberPage .memberItem > .fieldWrap > .field {
     list-style-type: disc;
     margin-left: 1rem;
     font-size: var(--body-small);
@@ -150,7 +150,7 @@
     color: var(--body-color);
 }
 
-.memberItem > .company {
+#memberPage .memberItem > .company {
     margin-top: 0.75rem;
     font-size: var(--body-small);
     font-weight: var(--title-weight);

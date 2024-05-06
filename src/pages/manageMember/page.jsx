@@ -52,6 +52,14 @@ const ManageMemberPage = () => {
                     </div>
                 </div>
                 <div className="memberWrap">
+                    <div className="memberWrapHeader">
+                        <p className="h_o_1">프로필</p>
+                        <p className="h_o_2">이름</p>
+                        <p className="h_o_3">이메일</p>
+                        <p className="h_o_4">연구분야</p>
+                        <p className="h_o_5">수정</p>
+                        <p className="h_o_6">삭제</p>
+                    </div>
                     {professor.map((data, idx) => (
                         <ProfessorItem
                             profile={data.profile}
@@ -83,6 +91,14 @@ const ManageMemberPage = () => {
                     </div>
                 </div>
                 <div className="memberWrap">
+                    <div className="memberWrapHeader">
+                        <p className="h_o_1">프로필</p>
+                        <p className="h_o_2">이름</p>
+                        <p className="h_o_3">이메일</p>
+                        <p className="h_o_4">관심분야</p>
+                        <p className="h_o_5">수정</p>
+                        <p className="h_o_6">삭제</p>
+                    </div>
                     {undergraduate.map((data, idx) => (
                         <UndergraduateItem
                             profile={data.profile}
@@ -115,6 +131,14 @@ const ManageMemberPage = () => {
                     </div>
                 </div>
                 <div className="memberWrap">
+                    <div className="memberWrapHeader">
+                        <p className="h_o_2">이름</p>
+                        <p className="h_o_7">졸업년도</p>
+                        <p className="h_o_3">이메일</p>
+                        <p className="h_o_4">재직회사</p>
+                        <p className="h_o_5">수정</p>
+                        <p className="h_o_6">삭제</p>
+                    </div>
                     {graduate.map((data, idx) => (
                         <GraduateItem
                             graduated={data.graduated}
@@ -176,7 +200,6 @@ const ProfessorItem = ({
             <img className="profile" src={profile} alt={name} />
             <h3 className="name">{name}</h3>
             <p className="email">{email}</p>
-            <h6 className="subTitle">연구분야</h6>
             <ul className="fieldWrap">
                 {field.map((f, idx) => (
                     <li className="field" key={`field{idx}`}>
@@ -228,7 +251,6 @@ const UndergraduateItem = ({
             <img className="profile" src={profile} alt={name} />
             <h3 className="name">{name}</h3>
             <p className="email">{email}</p>
-            <h6 className="subTitle">관심분야</h6>
             <ul className="fieldWrap">
                 {field.map((f, idx) => (
                     <li className="field" key={`field{idx}`}>
@@ -277,10 +299,8 @@ const GraduateItem = ({
     };
     return (
         <div className="memberItem">
-            <h3 className="name">
-                {name}
-                <span>{graduated}년 졸업</span>
-            </h3>
+            <h3 className="name">{name}</h3>
+            <p className="graduated">{graduated}년 졸업</p>
             <p className="email">{email}</p>
             <p className="company">{company}</p>
             <div className="funcWrap">

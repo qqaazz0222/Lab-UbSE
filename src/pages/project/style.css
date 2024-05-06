@@ -92,7 +92,7 @@
     width: 100%;
 }
 
-.projectItem {
+#projectPage .projectItem {
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -102,31 +102,31 @@
     box-shadow: 0 0 14rem rgb(0 0 0 / 3%);
 }
 
-.projectItem > .thumb {
+#projectPage .projectItem > .thumb {
     width: 100%;
     height: 12rem;
     border-radius: var(--border-radius);
     object-fit: cover;
     overflow: hidden;
 }
-.projectItem > .thumb > img {
+#projectPage .projectItem > .thumb > img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     transition: transform 0.5s;
 }
 
-.projectItem:hover > .thumb > img {
+#projectPage .projectItem:hover > .thumb > img {
     transform: scale(1.05);
 }
 
-.projectItem > .contentWrap {
+#projectPage .projectItem > .contentWrap {
     display: flex;
     flex-direction: column;
     padding: 1.5rem;
 }
 
-.projectItem > .contentWrap > .name {
+#projectPage .projectItem > .contentWrap > .name {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -135,47 +135,47 @@
     font-weight: var(--title-weight);
     color: var(--title-color);
 }
-.projectItem > .contentWrap > .desc {
+#projectPage .projectItem > .contentWrap > .desc {
     font-size: var(--body-medium);
     font-weight: var(--body-weight);
     color: var(--body-color);
 }
-.projectItem > .contentWrap > .period {
+#projectPage .projectItem > .contentWrap > .period {
     margin-bottom: 0.5rem;
     font-size: var(--desc-small);
     font-weight: var(--desc-weight);
     color: var(--desc-color);
 }
 
-.projectItem > .contentWrap > .subTitle {
+#projectPage .projectItem > .contentWrap > .subTitle {
     margin-top: 0.75rem;
     margin-bottom: 0.25rem;
     font-size: var(--body-small);
     font-weight: var(--title-weight);
     color: var(--title-color);
 }
-.projectItem > .contentWrap > .memberWrap {
+#projectPage .projectItem > .contentWrap > .memberWrap {
 }
-.projectItem > .contentWrap > .memberWrap > .member {
+#projectPage .projectItem > .contentWrap > .memberWrap > .member {
     margin-left: 1.25rem;
     list-style-type: disc;
     font-size: var(--body-small);
     font-weight: var(--body-weight);
     color: var(--body-color);
 }
-.projectItem > .contentWrap > .memberWrap > .member > .name {
+#projectPage .projectItem > .contentWrap > .memberWrap > .member > .name {
     margin-right: 0.25rem;
     font-size: var(--body-small);
     font-weight: var(--body-weight);
     color: var(--body-color);
 }
-.projectItem > .contentWrap > .memberWrap > .member > .role {
+#projectPage .projectItem > .contentWrap > .memberWrap > .member > .role {
     font-size: var(--desc-small);
     font-weight: var(--desc-weight);
     color: var(--desc-color);
 }
 
-.projectItem > .contentWrap > .linkWrap {
+#projectPage .projectItem > .contentWrap > .linkWrap {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -183,13 +183,13 @@
     margin-top: 0.5rem;
 }
 
-.projectItem > .contentWrap > .linkWrap > a > svg {
+#projectPage .projectItem > .contentWrap > .linkWrap > a > svg {
     color: var(--desc-color);
     fill: transparent;
     transition: color 0.3s, fill 0.3s;
 }
 
-.projectItem > .contentWrap > .linkWrap > a:hover > svg {
+#projectPage .projectItem > .contentWrap > .linkWrap > a:hover > svg {
     color: var(--title-color);
     fill: var(--primary-color);
 }

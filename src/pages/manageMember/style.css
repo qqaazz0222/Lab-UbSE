@@ -4,6 +4,7 @@
     gap: 3rem;
     padding: 3rem 2rem;
     width: 100%;
+    min-width: var(--max-content-width-small);
 }
 
 #manageMemberPage .memberContainer {
@@ -17,7 +18,7 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    margin-bottom: 2rem;
+    margin-bottom: 0.5rem;
 }
 
 #manageMemberPage > .memberContainer > .headerWrap > .title {
@@ -69,16 +70,69 @@
 }
 
 #manageMemberPage > .memberContainer > .memberWrap {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
     width: 100%;
 }
 
-.memberItem {
+#manageMemberPage > .memberContainer > .memberWrap > .memberWrapHeader {
     display: flex;
-    flex-direction: column;
-    padding: 1.5rem;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+    padding: 0 1rem;
+}
+#manageMemberPage > .memberContainer > .memberWrap > .memberWrapHeader > p {
+    font-size: var(--desc-medium);
+    font-weight: var(--body-weight);
+    color: var(--body-color);
+}
+
+#manageMemberPage
+    > .memberContainer
+    > .memberWrap
+    > .memberWrapHeader
+    > .h_o_1 {
+    width: 3rem;
+}
+#manageMemberPage > .memberContainer > .memberWrap > .memberWrapHeader > .h_o_2,
+#manageMemberPage
+    > .memberContainer
+    > .memberWrap
+    > .memberWrapHeader
+    > .h_o_7 {
+    width: 6rem;
+}
+#manageMemberPage
+    > .memberContainer
+    > .memberWrap
+    > .memberWrapHeader
+    > .h_o_3 {
+    width: 14rem;
+}
+#manageMemberPage
+    > .memberContainer
+    > .memberWrap
+    > .memberWrapHeader
+    > .h_o_4 {
+    flex: 1;
+}
+#manageMemberPage > .memberContainer > .memberWrap > .memberWrapHeader > .h_o_5,
+#manageMemberPage
+    > .memberContainer
+    > .memberWrap
+    > .memberWrapHeader
+    > .h_o_6 {
+    width: 2.375rem;
+    text-align: center;
+}
+#manageMemberPage .memberItem {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
     width: 100%;
     max-width: 100%;
     background-color: #ffffff;
@@ -86,70 +140,73 @@
     box-shadow: 0 0 14rem rgb(0 0 0 / 3%);
 }
 
-.memberItem > .profile {
-    margin-bottom: 1rem;
-    width: 4rem;
-    height: 4rem;
+#manageMemberPage .memberItem > .profile {
+    width: 3rem;
+    height: 3rem;
     border: 1px solid var(--border-color);
     border-radius: 50%;
     object-fit: cover;
 }
 
-.memberItem > .name {
+#manageMemberPage .memberItem > .name {
     display: flex;
     flex-direction: row;
     align-items: center;
     gap: 0.5rem;
+    width: 6rem;
     font-size: var(--title-small);
     font-weight: var(--title-weight);
     color: var(--title-color);
 }
 
-.memberItem > .name > span {
+#manageMemberPage .memberItem > .graduated {
+    width: 6rem;
     font-size: var(--body-small);
     font-weight: var(--body-weight);
     color: var(--primary-color);
 }
-.memberItem > .email {
+#manageMemberPage .memberItem > .email {
+    width: 14rem;
     font-size: var(--desc-medium);
     font-weight: var(--desc-weight);
     color: var(--desc-color);
 }
 
-.memberItem > .subTitle {
-    margin-top: 0.75rem;
-    margin-bottom: 0.25rem;
+#manageMemberPage .memberItem > .subTitle {
     font-size: var(--body-small);
     font-weight: var(--title-weight);
     color: var(--title-color);
 }
-.memberItem > .fieldWrap {
+#manageMemberPage .memberItem > .fieldWrap {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    flex: 1;
 }
-.memberItem > .fieldWrap > .field {
+#manageMemberPage .memberItem > .fieldWrap > .field {
     list-style-type: disc;
-    margin-left: 1rem;
     font-size: var(--body-small);
     font-weight: var(--body-weight);
     color: var(--body-color);
 }
 
-.memberItem > .company {
-    margin-top: 0.75rem;
+#manageMemberPage .memberItem > .company {
+    flex: 1;
     font-size: var(--body-small);
     font-weight: var(--title-weight);
     color: var(--title-color);
 }
 
-.memberItem > .funcWrap {
+#manageMemberPage .memberItem > .funcWrap {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: flex-end;
     gap: 0.5rem;
-    margin-top: 1rem;
 }
 
-.memberItem > .funcWrap > button {
+#manageMemberPage .memberItem > .funcWrap > button {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -164,11 +221,11 @@
     transition: border 0.3s;
 }
 
-.memberItem > .funcWrap > button:hover {
+#manageMemberPage .memberItem > .funcWrap > button:hover {
     border: 1px solid var(--title-color);
 }
 
-.memberItem > .funcWrap > button > svg {
+#manageMemberPage .memberItem > .funcWrap > button > svg {
     width: 1rem;
     height: 1rem;
     stroke-width: 2px;

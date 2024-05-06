@@ -4,6 +4,7 @@
     gap: 3rem;
     padding: 3rem 2rem;
     width: 100%;
+    min-width: var(--max-content-width-small);
 }
 
 #manageProjectPage .projectContainer {
@@ -17,7 +18,7 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
 }
 
 #manageProjectPage > .projectContainer > .headerWrap > .title {
@@ -78,14 +79,92 @@
 }
 
 #manageProjectPage > .projectContainer > .projectWrap {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 2rem;
-    width: 100%;
-}
-.projectItem {
     display: flex;
     flex-direction: column;
+    gap: 0.5rem;
+    width: 100%;
+}
+
+#manageProjectPage > .projectContainer > .projectWrap > .projectWrapHeader {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+    padding: 0 0.5rem;
+    width: 100%;
+    min-width: var(--max-content-width-small);
+}
+
+#manageProjectPage > .projectContainer > .projectWrap > .projectWrapHeader > p {
+    font-size: var(--desc-medium);
+    font-weight: var(--body-weight);
+    color: var(--body-color);
+}
+
+#manageProjectPage
+    > .projectContainer
+    > .projectWrap
+    > .projectWrapHeader
+    > .h_o_1 {
+    width: 6rem;
+}
+#manageProjectPage
+    > .projectContainer
+    > .projectWrap
+    > .projectWrapHeader
+    > .h_o_2 {
+    width: 8rem;
+}
+
+#manageProjectPage
+    > .projectContainer
+    > .projectWrap
+    > .projectWrapHeader
+    > .h_o_3 {
+    width: 8rem;
+}
+
+#manageProjectPage
+    > .projectContainer
+    > .projectWrap
+    > .projectWrapHeader
+    > .h_o_4 {
+    flex: 1;
+}
+#manageProjectPage
+    > .projectContainer
+    > .projectWrap
+    > .projectWrapHeader
+    > .h_o_5 {
+    width: 20rem;
+}
+#manageProjectPage
+    > .projectContainer
+    > .projectWrap
+    > .projectWrapHeader
+    > .h_o_6 {
+    width: 5rem;
+}
+
+#manageProjectPage
+    > .projectContainer
+    > .projectWrap
+    > .projectWrapHeader
+    > .h_o_7,
+#manageProjectPage
+    > .projectContainer
+    > .projectWrap
+    > .projectWrapHeader
+    > .h_o_8 {
+    width: 2.375rem;
+    text-align: center;
+}
+#manageProjectPage .projectItem {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.5rem;
     width: 100%;
     max-width: 100%;
     background-color: #ffffff;
@@ -93,96 +172,133 @@
     box-shadow: 0 0 14rem rgb(0 0 0 / 3%);
 }
 
-.projectItem > .thumb {
-    width: 100%;
-    height: 4rem;
+#manageProjectPage .projectItem > .thumb {
+    width: 6rem;
+    height: 100%;
     border-radius: var(--border-radius);
     object-fit: cover;
     overflow: hidden;
 }
-.projectItem > .thumb > img {
+#manageProjectPage .projectItem > .thumb > img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     transition: transform 0.5s;
 }
 
-.projectItem:hover > .thumb > img {
+#manageProjectPage .projectItem:hover > .thumb > img {
     transform: scale(1.05);
 }
 
-.projectItem > .contentWrap {
-    display: flex;
-    flex-direction: column;
-    padding: 1.5rem;
-}
-
-.projectItem > .contentWrap > .name {
+#manageProjectPage .projectItem > .name {
     display: flex;
     flex-direction: row;
     align-items: center;
     gap: 0.5rem;
+    width: 8rem;
     font-size: var(--title-small);
     font-weight: var(--title-weight);
     color: var(--title-color);
 }
-.projectItem > .contentWrap > .desc {
+#manageProjectPage .projectItem > .desc {
+    flex: 1;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
     font-size: var(--body-medium);
     font-weight: var(--body-weight);
     color: var(--body-color);
 }
-.projectItem > .contentWrap > .period {
-    margin-bottom: 0.5rem;
+#manageProjectPage .projectItem > .period {
+    width: 8rem;
     font-size: var(--desc-small);
     font-weight: var(--desc-weight);
     color: var(--desc-color);
 }
 
-.projectItem > .contentWrap > .subTitle {
+#manageProjectPage .projectItem > .subTitle {
     margin-top: 0.75rem;
     margin-bottom: 0.25rem;
     font-size: var(--body-small);
     font-weight: var(--title-weight);
     color: var(--title-color);
 }
-.projectItem > .contentWrap > .memberWrap {
+#manageProjectPage .projectItem > .memberWrap {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 20rem;
 }
-.projectItem > .contentWrap > .memberWrap > .member {
+#manageProjectPage .projectItem > .memberWrap > .member {
     margin-left: 1.25rem;
     list-style-type: disc;
     font-size: var(--body-small);
     font-weight: var(--body-weight);
     color: var(--body-color);
 }
-.projectItem > .contentWrap > .memberWrap > .member > .name {
+#manageProjectPage .projectItem > .memberWrap > .member > .name {
     margin-right: 0.25rem;
     font-size: var(--body-small);
     font-weight: var(--body-weight);
     color: var(--body-color);
 }
-.projectItem > .contentWrap > .memberWrap > .member > .role {
+#manageProjectPage .projectItem > .memberWrap > .member > .role {
     font-size: var(--desc-small);
     font-weight: var(--desc-weight);
     color: var(--desc-color);
 }
 
-.projectItem > .contentWrap > .linkWrap {
+#manageProjectPage .projectItem > .linkWrap {
     display: flex;
     flex-direction: row;
     align-items: center;
     gap: 0.5rem;
-    margin-top: 0.5rem;
+    width: 5rem;
 }
 
-.projectItem > .contentWrap > .linkWrap > a > svg {
+#manageProjectPage .projectItem > .linkWrap > a > svg {
     color: var(--desc-color);
     fill: transparent;
     transition: color 0.3s, fill 0.3s;
 }
 
-.projectItem > .contentWrap > .linkWrap > a:hover > svg {
+#manageProjectPage .projectItem > .linkWrap > a:hover > svg {
     color: var(--title-color);
     fill: var(--primary-color);
+}
+
+#manageProjectPage .projectItem > .funcWrap {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 0.5rem;
+}
+
+#manageProjectPage .projectItem > .funcWrap > button {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.25rem;
+    padding: 0.75rem;
+    background-color: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    font-size: var(--body-small);
+    font-weight: var(--title-weight);
+    color: var(--title-color);
+    transition: border 0.3s;
+}
+
+#manageProjectPage .projectItem > .funcWrap > button:hover {
+    border: 1px solid var(--title-color);
+}
+
+#manageProjectPage .projectItem > .funcWrap > button > svg {
+    width: 1rem;
+    height: 1rem;
+    stroke-width: 2px;
 }
 
 @media (max-width: 1024px) {
