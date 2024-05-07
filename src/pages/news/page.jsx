@@ -10,6 +10,14 @@ import { news } from "./data";
 import "./style.css";
 
 const NewsPage = () => {
+    const parseContext = (context) => {
+        console.log(context);
+        let temp = [];
+        context.forEach((node) => {
+            temp.push(node.content);
+        });
+        return temp.join(" ");
+    };
     return (
         <div id="newsPage" className="page">
             <div className="pageHeader">
@@ -30,7 +38,9 @@ const NewsPage = () => {
                                 <div className="newsItem">
                                     <div className="infoWrap">
                                         <h3 className="title">{c.title}</h3>
-                                        <p className="context">{c.context}</p>
+                                        <p className="context">
+                                            {parseContext(c.context.content)}
+                                        </p>
                                         <p className="created">{c.created}</p>
                                     </div>
                                     <img className="thumb" src={c.thumb} />
