@@ -10,6 +10,22 @@
     display: flex;
     flex-direction: column;
     padding-left: 16rem;
+    padding-bottom: 4rem;
     width: 100svw;
     scroll-behavior: smooth;
+}
+
+#dashboardLayout .toTopBtn {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    right: 1.5rem;
+    bottom: 1.5rem;
+    width: 4rem;
+    height: 4rem;
+    background-color: var(--section-bg-color-1);
+    box-shadow: 0 0.5rem 1rem #00000011;
+    border-radius: 50%;
 }
