@@ -31,7 +31,7 @@
     --max-content-width-small: 58rem;
     --header-z-index: 1000;
     --dialog-z-index: 1001;
-    --dialog-max-width: 24rem;
+    --dialog-max-width: 32rem;
     --section-bg-color-1: #ffffff;
     --section-bg-color-2: #f8f8f8;
     --section-z-index: 100;
@@ -117,4 +117,49 @@
 *::selection {
     color: #ffffff;
     background-color: var(--primary-color);
+}
+
+@keyframes pageFadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+#manageMemberPage .shortCutWrap,
+#manageProjectPage .shortCutWrap,
+#manageNewsPage .shortCutWrap {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5rem;
+}
+#manageMemberPage .shortCutWrap > p,
+#manageProjectPage .shortCutWrap > p,
+#manageNewsPage .shortCutWrap > p {
+    margin-right: 0.5rem;
+    font-size: var(--body-medium);
+    font-weight: var(--border-weight);
+    color: var(--body-color);
+}
+
+#manageMemberPage .shortCutWrap > .shortCutBtn,
+#manageProjectPage .shortCutWrap > .shortCutBtn,
+#manageNewsPage .shortCutWrap > .shortCutBtn {
+    padding: 0.5rem 0.75rem;
+    background-color: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    font-size: var(--body-medium);
+    font-weight: 500;
+    color: var(--body-color);
+    transition: border 0.3s, color 0.3s;
+}
+#manageMemberPage .shortCutWrap > .shortCutBtn:hover,
+#manageProjectPage .shortCutWrap > .shortCutBtn:hover,
+#manageNewsPage .shortCutWrap > .shortCutBtn:hover {
+    border: 1px solid var(--title-color);
+    color: var(--heading-color);
 }

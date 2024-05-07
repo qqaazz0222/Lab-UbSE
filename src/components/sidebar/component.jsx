@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 // 서비스
 // 컴포넌트
 // 아이콘
-import { Users, FolderKanban, Newspaper } from "lucide-react";
+import { Users, FolderKanban, Newspaper, LogOut } from "lucide-react";
 // 스타일
 import "./style.css";
 
@@ -71,6 +71,12 @@ const Sidebar = () => {
                         소식관리
                     </li>
                 </ul>
+            </div>
+            <div className="linkWrap">
+                <a className="goHomeWrap" href="/">
+                    <LogOut />
+                    <p>관리페이지 나가기</p>
+                </a>
             </div>
         </div>
     );

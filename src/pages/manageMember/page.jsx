@@ -22,20 +22,46 @@ const ManageMemberPage = () => {
     const [updatePopUp, setUpdatePopUp] = useState(false);
     const [deletePopUp, setDeletePopUp] = useState(false);
     const [memberTyep, setMemberType] = useState("");
-    const [target, setTarget] = useState({
-        name: "",
-        email: "",
-        field: [],
-        graduated: 0,
-        company: "",
-    });
+    const [target, setTarget] = useState(dataForm);
     const createMember = (type) => {
         setMemberType(type);
         setCreatePopUp(true);
     };
+    const shortCutHandler = (target) => {
+        const node = document.getElementById(target);
+        const pos = node.offsetTop - 32;
+        window.scrollTo({ top: pos, behavior: "smooth" });
+    };
     return (
         <div id="manageMemberPage" className="page">
-            <div className="memberContainer">
+            <div className="shortCutWrap">
+                <p>목록</p>
+                <button
+                    className="shortCutBtn"
+                    onClick={() => {
+                        shortCutHandler(`memberContainerProfessor`);
+                    }}
+                >
+                    교수
+                </button>
+                <button
+                    className="shortCutBtn"
+                    onClick={() => {
+                        shortCutHandler(`memberContainerUndergraduate`);
+                    }}
+                >
+                    학부생
+                </button>
+                <button
+                    className="shortCutBtn"
+                    onClick={() => {
+                        shortCutHandler(`memberContainerGraduate`);
+                    }}
+                >
+                    졸업생
+                </button>
+            </div>
+            <div className="memberContainer" id="memberContainerProfessor">
                 <div className="headerWrap">
                     <h1 className="title">
                         교수<span>{professor.length}</span>
@@ -73,7 +99,7 @@ const ManageMemberPage = () => {
                     ))}
                 </div>
             </div>
-            <div className="memberContainer">
+            <div className="memberContainer" id="memberContainerUndergraduate">
                 <div className="headerWrap">
                     <h1 className="title">
                         학부생
@@ -113,7 +139,7 @@ const ManageMemberPage = () => {
                 </div>
             </div>
             {/* 졸업생 */}
-            <div className="memberContainer">
+            <div className="memberContainer" id="memberContainerGraduate">
                 <div className="headerWrap">
                     <h1 className="title">
                         졸업생

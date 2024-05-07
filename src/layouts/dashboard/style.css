@@ -11,4 +11,5 @@
     flex-direction: column;
     padding-left: 16rem;
     width: 100svw;
+    scroll-behavior: smooth;
 }

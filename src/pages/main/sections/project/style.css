@@ -60,7 +60,7 @@
     color: #ffffff;
 }
 
-.projectItem {
+#projectSection .projectItem {
     display: flex;
     flex-direction: column;
     background-color: #ffffff;
@@ -69,7 +69,7 @@
     box-shadow: 0 0 14rem rgb(0 0 0 / 3%);
 }
 
-.projectItem > .thumbWrap {
+#projectSection .projectItem > .thumbWrap {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -82,18 +82,18 @@
     overflow: hidden;
 }
 
-.projectItem > .thumbWrap > img {
+#projectSection .projectItem > .thumbWrap > img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     transition: transform 0.5s;
 }
 
-.projectItem:hover > .thumbWrap > img {
+#projectSection .projectItem:hover > .thumbWrap > img {
     transform: scale(1.05);
 }
 
-.projectItem > .thumbWrap > .iconWrap {
+#projectSection .projectItem > .thumbWrap > .iconWrap {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -107,13 +107,13 @@
     border-radius: 50%;
 }
 
-.projectItem > .thumbWrap > .iconWrap > svg {
+#projectSection .projectItem > .thumbWrap > .iconWrap > svg {
     width: 1.125rem;
     height: 1.125rem;
     stroke-width: 2.4;
 }
 
-.projectItem > .contextWrap {
+#projectSection .projectItem > .contextWrap {
     display: flex;
     flex-direction: column;
     padding: 1.5rem 1.5rem 1.25rem 1.5rem;
@@ -121,14 +121,14 @@
     max-width: 100%;
 }
 
-.projectItem > .contextWrap > .infoWrap {
+#projectSection .projectItem > .contextWrap > .infoWrap {
     display: flex;
     flex-direction: column;
     width: 100%;
     max-width: 100%;
 }
 
-.projectItem > .contextWrap > .infoWrap > .category {
+#projectSection .projectItem > .contextWrap > .infoWrap > .category {
     margin-bottom: 0.25rem;
     width: 100%;
     text-overflow: ellipsis;
@@ -138,7 +138,7 @@
     font-weight: var(--title-weight);
     color: var(--body-color);
 }
-.projectItem > .contextWrap > .infoWrap > .title {
+#projectSection .projectItem > .contextWrap > .infoWrap > .title {
     width: 100%;
     display: -webkit-box;
     word-wrap: break-word;
@@ -152,7 +152,7 @@
     color: var(--title-color);
 }
 
-.projectItem > .contextWrap > .infoWrap > .desc {
+#projectSection .projectItem > .contextWrap > .infoWrap > .desc {
     width: 100%;
     display: -webkit-box;
     word-wrap: break-word;

@@ -15,53 +15,27 @@ import { progress, complete } from "./data";
 // 스타일
 import "./style.css";
 
-const dataForm = {
-    name: "",
-    start: "",
-    end: "",
-    desc: "",
-    leader: "",
-    member: [{ name: "", role: "" }],
-    link: [{ type: "", url: "" }],
-};
-
 const ManageProjectPage = () => {
     const [createPopUp, setCreatePopUp] = useState(false);
     const [updatePopUp, setUpdatePopUp] = useState(false);
     const [deletePopUp, setDeletePopUp] = useState(false);
     const [projectType, setProjectType] = useState("");
-    const [target, setTarget] = useState(dataForm);
+    const [target, setTarget] = useState({
+        name: "",
+        start: "",
+        end: "",
+        desc: "",
+        leader: "",
+        member: [{ name: "", role: "" }],
+        link: [{ type: "", url: "" }],
+    });
     const createProject = (type) => {
         setProjectType(type);
         setCreatePopUp(true);
     };
-    const shortCutHandler = (target) => {
-        const node = document.getElementById(target);
-        const pos = node.offsetTop - 32;
-        window.scrollTo({ top: pos, behavior: "smooth" });
-    };
     return (
         <div id="manageProjectPage" className="page">
-            <div className="shortCutWrap">
-                <p>목록</p>
-                <button
-                    className="shortCutBtn"
-                    onClick={() => {
-                        shortCutHandler(`projectContainerProgress`);
-                    }}
-                >
-                    진행중인 프로젝트
-                </button>
-                <button
-                    className="shortCutBtn"
-                    onClick={() => {
-                        shortCutHandler(`projectContainerComplete`);
-                    }}
-                >
-                    완료된 프로젝트
-                </button>
-            </div>
-            <div className="projectContainer" id="projectContainerProgress">
+            <div className="projectContainer">
                 <div className="headerWrap">
                     <h1 className="title">
                         진행중인 프로젝트<span>{progress.length}</span>
@@ -99,14 +73,11 @@ const ManageProjectPage = () => {
                             member={data.member}
                             link={data.link}
                             key={idx}
-                            setUpdate={setUpdatePopUp}
-                            setDelete={setDeletePopUp}
-                            setTarget={setTarget}
                         />
                     ))}
                 </div>
             </div>
-            <div className="projectContainer" id="projectContainerComplete">
+            <div className="projectContainer">
                 <div className="headerWrap">
                     <h1 className="title">
                         완료된 프로젝트<span>{complete.length}</span>
@@ -144,9 +115,6 @@ const ManageProjectPage = () => {
                             member={data.member}
                             link={data.link}
                             key={idx}
-                            setUpdate={setUpdatePopUp}
-                            setDelete={setDeletePopUp}
-                            setTarget={setTarget}
                         />
                     ))}
                 </div>
@@ -176,34 +144,7 @@ const ProjectItem = ({
     leader = "프로젝트리더",
     member = [],
     link = [],
-    setUpdate,
-    setDelete,
-    setTarget,
 }) => {
-    const updateProject = () => {
-        let temp = dataForm;
-        temp.name = name;
-        temp.desc = desc;
-        temp.start = start;
-        temp.end = end;
-        temp.leader = leader;
-        temp.member = member;
-        temp.link = link;
-        setTarget(temp);
-        setUpdate(true);
-    };
-    const deleteProject = () => {
-        let temp = dataForm;
-        temp.name = name;
-        temp.desc = desc;
-        temp.start = start;
-        temp.end = end;
-        temp.leader = leader;
-        temp.member = member;
-        temp.link = link;
-        setTarget(temp);
-        setDelete(true);
-    };
     return (
         <div className="projectItem">
             <div className="thumb">
@@ -234,10 +175,10 @@ const ProjectItem = ({
                 ))}
             </div>
             <div className="funcWrap">
-                <button onClick={updateProject}>
+                <button onClick={() => {}}>
                     <Pen />
                 </button>
-                <button onClick={deleteProject}>
+                <button onClick={() => {}}>
                     <Trash2 />
                 </button>
             </div>
